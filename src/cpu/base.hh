@@ -46,6 +46,8 @@
 #ifndef __CPU_BASE_HH__
 #define __CPU_BASE_HH__
 
+int global_flag = 0;          // TODO: Added
+
 #include <vector>
 
 // Before we do anything else, check if this build is the NULL ISA,

@@ -57,11 +57,12 @@
 
 struct DerivO3CPUParams;
 
-template <class Impl>
-class FullO3CPU;
+template <class Impl> class FullO3CPU;
 
-template <class Impl>
-class LSQ
+
+// * This file has the complete class of LSQ
+// * Read Write functions have been defined below
+template <class Impl> class LSQ                    
 
 {
   public:
@@ -302,6 +303,7 @@ class LSQ
         AtomicOpFunctorPtr _amo_op;
       protected:
         LSQUnit* lsqUnit() { return &_port; }
+
         LSQRequest(LSQUnit* port, const DynInstPtr& inst, bool isLoad) :
             _state(State::NotIssued), _senderState(nullptr),
             _port(*port), _inst(inst), _data(nullptr),
@@ -314,6 +316,7 @@ class LSQ
             flags.set(Flag::IsAtomic, _inst->isAtomic());
             install();
         }
+
         LSQRequest(LSQUnit* port, const DynInstPtr& inst, bool isLoad,
                    const Addr& addr, const uint32_t& size,
                    const Request::Flags& flags_,
@@ -351,10 +354,12 @@ class LSQ
         void install()
         {
             if (isLoad()) {
+                // printf("===================== Installing in LoQ ====== \n");
                 _port.loadQueue[_inst->lqIdx].setRequest(this);
             } else {
                 // Store, StoreConditional, and Atomic requests are pushed
                 // to this storeQueue
+                // printf("===================== Installing in StQ ====== \n");
                 _port.storeQueue[_inst->sqIdx].setRequest(this);
             }
         }
@@ -447,7 +452,7 @@ class LSQ
             request()->setContext(context_id);
         }
 
-        const DynInstPtr&
+        const DynInstPtr& 
         instruction()
         {
             return _inst;

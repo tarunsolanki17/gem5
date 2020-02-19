@@ -69,6 +69,8 @@
 #include "params/DerivO3CPU.hh"
 #include "sim/process.hh"
 
+
+
 template <class>
 class Checker;
 class ThreadContext;
@@ -710,27 +712,62 @@ class FullO3CPU : public BaseO3CPU
     /** Available thread ids in the cpu*/
     std::vector<ThreadID> tids;
 
-    /** CPU pushRequest function, forwards request to LSQ. */
+    //** CPU pushRequest function, forwards request to LSQ. */
+
+    //* data -> will be present only if it is a store intruction.
+
+    //* typedef uint64_t Addr;         <== Definition of Addr
+
+    //* uint8_t *data => this is a pointer to some location which can be type casted to a pointer of different type.
+    //* The size variable might be helping with that.
+
+    // #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
+    // #include"/home/tarun/Desktop/gem5/src/sim/pseudo_inst.cc"
+
+    //TODO: The definition of global_flag has been moved to cpu/base.hh
+
     Fault pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                       unsigned int size, Addr addr, Request::Flags flags,
                       uint64_t *res, AtomicOpFunctorPtr amo_op = nullptr,
                       const std::vector<bool>& byte_enable =
                           std::vector<bool>())
 
-    {
+    {   
+        // if(flag_printf==NULL){
+        //   initer();
+        // }
+
+        printf("global_flag addr in pushRequest = %p\n", &global_flag);
+        
+        if(global_flag==1){
+        printf("===================== pushRequest in cpu.hh ==================\n");
+        if(!isLoad){
+          printf("===================== Store Data = %hhx ==================\n",*data);
+        }
+        if(isLoad){
+          printf("===================== Load from Address = %ld ==================\n", addr);
+        }
+        else{
+          printf("===================== Store at Address = %ld ==================\n",addr);
+        }
+      }
+        
+
         return iew.ldstQueue.pushRequest(inst, isLoad, data, size, addr,
                 flags, res, std::move(amo_op), byte_enable);
     }
 
     /** CPU read function, forwards read to LSQ. */
     Fault read(LSQRequest* req, int load_idx)
-    {
+    {   //if(*flag_printf==1)
+        // printf("===================== read from CPU ==================\n");
         return this->iew.ldstQueue.read(req, load_idx);
     }
 
     /** CPU write function, forwards write to LSQ. */
     Fault write(LSQRequest* req, uint8_t *data, int store_idx)
-    {
+    {   //if(*flag_printf==1)
+        // printf("===================== write from CPU ==================\n");
         return this->iew.ldstQueue.write(req, data, store_idx);
     }
 

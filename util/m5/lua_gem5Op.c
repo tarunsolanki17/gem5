@@ -146,6 +146,13 @@ do_dump_stats(lua_State *L)
     return 0;
 }
 
+                                                            // TODO: Added the function here.
+
+static int do_global_init(lua_State *L){
+    m5_global_init();
+    return 0;
+}
+
 static int
 do_dump_reset_stats(lua_State *L)
 {
@@ -264,6 +271,9 @@ luaopen_gem5OpLua(lua_State *L)
     ADD_FUNC(do_checkpoint);
     ADD_FUNC(do_reset_stats);
     ADD_FUNC(do_dump_stats);
+
+    ADD_FUNC(do_global_init);               // TODO: Added the function do_global_init();
+
     ADD_FUNC(do_dump_reset_stats);
     ADD_FUNC(do_read_file);
     ADD_FUNC(do_write_file);

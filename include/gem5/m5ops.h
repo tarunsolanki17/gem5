@@ -38,7 +38,7 @@ extern "C" {
 
 #include <stdint.h>
 
-#include <gem5/asm/generic/m5op_flags.h>
+#include </home/tarun/Desktop/gem5/include/gem5/asm/generic/m5op_flags.h>
 
 void m5_arm(uint64_t address);
 void m5_quiesce(void);
@@ -48,12 +48,17 @@ uint64_t m5_quiesce_time(void);
 uint64_t m5_rpns();
 void m5_wake_cpu(uint64_t cpuid);
 
+
+
 void m5_exit(uint64_t ns_delay);
 void m5_fail(uint64_t ns_delay, uint64_t code);
 uint64_t m5_init_param(uint64_t key_str1, uint64_t key_str2);
 void m5_checkpoint(uint64_t ns_delay, uint64_t ns_period);
 void m5_reset_stats(uint64_t ns_delay, uint64_t ns_period);
 void m5_dump_stats(uint64_t ns_delay, uint64_t ns_period);
+
+void m5_global_init();          //TODO: Add the declaration here
+
 void m5_dump_reset_stats(uint64_t ns_delay, uint64_t ns_period);
 uint64_t m5_read_file(void *buffer, uint64_t len, uint64_t offset);
 uint64_t m5_write_file(void *buffer, uint64_t len, uint64_t offset,

@@ -161,7 +161,7 @@ class Named
 };
 
 //
-// DPRINTF is a debugging trace facility that allows one to
+// TODO: DPRINTF is a debugging trace facility that allows one to
 // selectively enable tracing statements.  To use DPRINTF, there must
 // be a function or functor called name() that returns a const
 // std::string & in the current scope.

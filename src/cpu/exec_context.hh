@@ -189,8 +189,8 @@ class ExecContext {
      * @name Condition Code Registers
      */
     virtual RegVal readCCRegOperand(const StaticInst *si, int idx) = 0;
-    virtual void setCCRegOperand(
-            const StaticInst *si, int idx, RegVal val) = 0;
+
+    virtual void setCCRegOperand(const StaticInst *si, int idx, RegVal val) = 0;
     /** @} */
 
     /**
@@ -198,8 +198,8 @@ class ExecContext {
      * @name Misc Register Interfaces
      */
     virtual RegVal readMiscRegOperand(const StaticInst *si, int idx) = 0;
-    virtual void setMiscRegOperand(const StaticInst *si,
-                                   int idx, RegVal val) = 0;
+
+    virtual void setMiscRegOperand(const StaticInst *si,int idx, RegVal val) = 0;
 
     /**
      * Reads a miscellaneous register, handling any architectural
@@ -220,6 +220,7 @@ class ExecContext {
      * @name PC Control
      */
     virtual PCState pcState() const = 0;
+
     virtual void pcState(const PCState &val) = 0;
     /** @} */
 
@@ -228,7 +229,7 @@ class ExecContext {
      * @name Memory Interface
      */
     /**
-     * Perform an atomic memory read operation.  Must be overridden
+    // * Perform an atomic memory read operation.  Must be overridden
      * for exec contexts that support atomic memory mode.  Not pure
      * virtual since exec contexts that only support timing memory
      * mode need not override (though in that case this function

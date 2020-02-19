@@ -47,6 +47,8 @@
 
 */
 
+//TODO: Add the new function here.
+
 JNIEXPORT void JNICALL
 Java_jni_gem5Op_arm(JNIEnv *env, jobject obj, jlong j_address)
 {

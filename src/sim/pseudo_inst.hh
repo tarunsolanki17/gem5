@@ -61,27 +61,29 @@ struct PseudoInstABI
 namespace GuestABI
 {
 
-template <typename T>
-struct Result<PseudoInstABI, T>
-{
-    static void
-    store(ThreadContext *tc, const T &ret)
-    {
-        // Don't do anything with the pseudo inst results by default.
-    }
-};
+  template <typename T>
+  struct Result<PseudoInstABI, T>
+  {
+      static void
+      store(ThreadContext *tc, const T &ret)
+      {
+          // Don't do anything with the pseudo inst results by default.
+      }
+  };
 
-template <>
-struct Argument<PseudoInstABI, uint64_t>
-{
-    static uint64_t
-    get(ThreadContext *tc, PseudoInstABI::Position &position)
-    {
-        return TheISA::getArgument(tc, position, sizeof(uint64_t), false);
-    }
-};
+  template <>
+  struct Argument<PseudoInstABI, uint64_t>
+  {
+      static uint64_t
+      get(ThreadContext *tc, PseudoInstABI::Position &position)
+      {
+          return TheISA::getArgument(tc, position, sizeof(uint64_t), false);
+      }
+  };
 
 } // namespace GuestABI
+
+// TODO: Add the new function declaration here and add the function in the swtich case below. (2 Tasks)
 
 namespace PseudoInst
 {
@@ -105,6 +107,9 @@ void m5exit(ThreadContext *tc, Tick delay);
 void m5fail(ThreadContext *tc, Tick delay, uint64_t code);
 void resetstats(ThreadContext *tc, Tick delay, Tick period);
 void dumpstats(ThreadContext *tc, Tick delay, Tick period);
+
+void globalinit(ThreadContext *tc);                   // TODO: Added Declaration
+
 void dumpresetstats(ThreadContext *tc, Tick delay, Tick period);
 void m5checkpoint(ThreadContext *tc, Tick delay, Tick period);
 void debugbreak(ThreadContext *tc);
@@ -115,7 +120,7 @@ void m5Syscall(ThreadContext *tc);
 void togglesync(ThreadContext *tc);
 
 /**
- * Execute a decoded M5 pseudo instruction
+ ** Execute a decoded M5 pseudo instruction
  *
  * The ISA-specific code is responsible to decode the pseudo inst
  * function number and subfunction number. After that has been done,
@@ -181,6 +186,8 @@ pseudoInst(ThreadContext *tc, uint8_t func)
         invokeSimcall<ABI>(tc, dumpstats);
         break;
 
+      
+
       case M5OP_DUMP_RESET_STATS:
         invokeSimcall<ABI>(tc, dumpresetstats);
         break;
@@ -219,7 +226,12 @@ pseudoInst(ThreadContext *tc, uint8_t func)
         break;
 
       case M5OP_ANNOTATE:
-      case M5OP_RESERVED2:
+
+      case M5OP_GLOBAL_INIT:                // TODO: Added case for global_init()
+        invokeSimcall<ABI>(tc, globalinit);
+        break;
+        
+      //case M5OP_RESERVED2:
       case M5OP_RESERVED3:
       case M5OP_RESERVED4:
       case M5OP_RESERVED5:

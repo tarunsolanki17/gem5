@@ -72,7 +72,7 @@
 #define M5OP_ADD_SYMBOL         0x53
 #define M5OP_PANIC              0x54
 
-#define M5OP_RESERVED2          0x56 // Reserved for user
+#define M5OP_GLOBAL_INIT        0x56 // Reserved for user           // TODO: Changed
 #define M5OP_RESERVED3          0x57 // Reserved for user
 #define M5OP_RESERVED4          0x58 // Reserved for user
 #define M5OP_RESERVED5          0x59 // Reserved for user
@@ -103,6 +103,7 @@
 #define M5OP_AN_IDENTIFY        0x10
 #define M5OP_AN_GETID           0x11
 
+// TODO: Added (line - 122) the reserved function here in #define (not in M5_ANNOTATION)
 
 #define M5OP_FOREACH                                            \
     M5OP(m5_arm, M5OP_ARM, 0);                                  \
@@ -118,6 +119,7 @@
     M5OP(m5_load_symbol, M5OP_LOAD_SYMBOL, 0);                  \
     M5OP(m5_reset_stats, M5OP_RESET_STATS, 0);                  \
     M5OP(m5_dump_stats, M5OP_DUMP_STATS, 0);                    \
+    M5OP(m5_global_init, M5OP_GLOBAL_INIT, 0);                  \
     M5OP(m5_dump_reset_stats, M5OP_DUMP_RESET_STATS, 0);        \
     M5OP(m5_checkpoint, M5OP_CHECKPOINT, 0);                    \
     M5OP(m5_read_file, M5OP_READ_FILE, 0);                      \

@@ -165,6 +165,8 @@ write_file(const char *filename, const char *host_filename)
     close(src_fid);
 }
 
+
+
 void
 do_exit(int argc, char *argv[])
 {
@@ -201,6 +203,12 @@ do_dump_stats(int argc, char *argv[])
     uint64_t ints[2];
     parse_int_args(argc, argv, ints, 2);
     m5_dump_stats(ints[0], ints[1]);
+}
+
+// TODO: Add the function with do_something()
+
+void do_global_init(int argc, char *argv[]){
+    m5_global_init();
 }
 
 void
@@ -343,6 +351,9 @@ struct MainFunc mainfuncs[] = {
     { "resetstats",     do_reset_stats,      "[delay [period]]" },
     { "dumpstats",      do_dump_stats,       "[delay [period]]" },
     { "dumpresetstats", do_dump_reset_stats, "[delay [period]]" },
+
+    { "globalinit",     do_global_init,      "" },                  // TODO: Added new function.
+
     { "readfile",       do_read_file,        "" },
     { "writefile",      do_write_file,       "<filename> [host filename]" },
     { "execfile",       do_exec_file,        "" },
@@ -377,6 +388,7 @@ usage()
 int
 main(int argc, char *argv[])
 {
+    printf("\n====Running m5.c====\n");
     progname = argv[0];
     if (argc < 2)
         usage(1);

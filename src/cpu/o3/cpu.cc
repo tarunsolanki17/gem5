@@ -70,11 +70,9 @@
 
 #if THE_ISA == ALPHA_ISA
 #include "arch/alpha/osfpal.hh"
-#include "debug/Activity.hh"
+#include "debug/Activity.hh" 
 
 #endif
-
-struct BaseCPUParams;
 
 using namespace TheISA;
 using namespace std;
@@ -763,7 +761,9 @@ FullO3CPU<Impl>::haltContext(ThreadID tid)
 template <class Impl>
 void
 FullO3CPU<Impl>::insertThread(ThreadID tid)
-{
+{   
+    // printf("===================== inserting Thread ========\n");
+
     DPRINTF(O3CPU,"[tid:%i] Initializing thread into CPU");
     // Will change now that the PC and thread state is internal to the CPU
     // and not in the ThreadContext.

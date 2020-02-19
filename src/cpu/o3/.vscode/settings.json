@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "m5ops.h": "c",
+        "cpu.hh": "c",
+        "streambuf": "cpp",
+        "*.s": "c",
+        "*.inc": "cpp"
+    }
+}

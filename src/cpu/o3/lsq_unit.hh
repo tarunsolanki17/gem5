@@ -110,7 +110,7 @@ class LSQUnit
         {
         }
 
-        ~LSQEntry()
+        ~LSQEntry()           //* Destructor
         {
             inst = nullptr;
             if (req != nullptr) {

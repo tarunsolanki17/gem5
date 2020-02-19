@@ -81,7 +81,7 @@ LSQ<Impl>::LSQ(O3CPU *cpu_ptr, IEW *iew_ptr, DerivO3CPUParams *params)
     //************ Handle SMT Parameters ***********/
     //**********************************************/
 
-    /* Run SMT olicy checks. */
+    /* Run SMT policy checks. */
         if (lsqPolicy == SMTQueuePolicy::Dynamic) {
         DPRINTF(LSQ, "LSQ sharing policy set to Dynamic\n");
     } else if (lsqPolicy == SMTQueuePolicy::Partitioned) {
@@ -149,6 +149,7 @@ template <class Impl>
 bool
 LSQ<Impl>::isDrained() const
 {
+    // printf("===================== Running isDrained =================\n");
     bool drained(true);
 
     if (!lqEmpty()) {
@@ -231,6 +232,8 @@ template<class Impl>
 void
 LSQ<Impl>::insertLoad(const DynInstPtr &load_inst)
 {
+    // printf("===================== Inserting Load =================\n");
+
     ThreadID tid = load_inst->threadNumber;
 
     thread[tid].insertLoad(load_inst);
@@ -240,6 +243,8 @@ template<class Impl>
 void
 LSQ<Impl>::insertStore(const DynInstPtr &store_inst)
 {
+    // printf("===================== Inserting Store =================\n");
+
     ThreadID tid = store_inst->threadNumber;
 
     thread[tid].insertStore(store_inst);
@@ -249,6 +254,7 @@ template<class Impl>
 Fault
 LSQ<Impl>::executeLoad(const DynInstPtr &inst)
 {
+    // printf("===================== Executing Load (executeLoad) =================\n");
     ThreadID tid = inst->threadNumber;
 
     return thread[tid].executeLoad(inst);
@@ -258,6 +264,7 @@ template<class Impl>
 Fault
 LSQ<Impl>::executeStore(const DynInstPtr &inst)
 {
+    // printf("===================== Executing Store (executeStore) =================\n");
     ThreadID tid = inst->threadNumber;
 
     return thread[tid].executeStore(inst);
@@ -391,6 +398,7 @@ LSQ<Impl>::getCount()
         total += getCount(tid);
     }
 
+    // printf("===================== getCount() = %d ============\n" , total);
     return total;
 }
 
@@ -501,6 +509,7 @@ template<class Impl>
 bool
 LSQ<Impl>::isFull(ThreadID tid)
 {
+    // printf("===================== Running isFull =================\n");
     //@todo: Change to Calculate All Entries for
     //Dynamic Policy
     if (lsqPolicy == SMTQueuePolicy::Dynamic)
@@ -513,6 +522,7 @@ template<class Impl>
 bool
 LSQ<Impl>::isEmpty() const
 {
+    // printf("===================== Running isEmpty =================\n");
     return lqEmpty() && sqEmpty();
 }
 
@@ -733,7 +743,7 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
         req->initiateTranslation();
     }
 
-    /* This is the place were instructions get the effAddr. */
+    /* This is the place where instructions get the effAddr. */
     if (req->isTranslationComplete()) {
         if (req->isMemAccessRequired()) {
             inst->effAddr = req->getVaddr();
@@ -776,7 +786,8 @@ LSQ<Impl>::SingleDataRequest::finish(const Fault &fault, const RequestPtr &req,
     _fault.push_back(fault);
     numInTranslationFragments = 0;
     numTranslatedFragments = 1;
-    /* If the instruction has been squahsed, let the request know
+    /*
+     * If the instruction has been squahsed, let the request know
      * as it may have to self-destruct. */
     if (_inst->isSquashed()) {
         this->squashTranslation();
@@ -1077,6 +1088,7 @@ template<class Impl>
 void
 LSQ<Impl>::SingleDataRequest::sendPacketToCache()
 {
+    // printf("===================== (Single) Sending Packets to cache ===========\n");
     assert(_numOutstandingPackets == 0);
     if (lsqUnit()->trySendPacket(isLoad(), _packets.at(0)))
         _numOutstandingPackets = 1;
@@ -1086,6 +1098,7 @@ template<class Impl>
 void
 LSQ<Impl>::SplitDataRequest::sendPacketToCache()
 {
+    // printf("===================== (Split) Sending Packets to cache ===========\n");
     /* Try to send the packets. */
     while (numReceivedPackets + _numOutstandingPackets < _packets.size() &&
             lsqUnit()->trySendPacket(isLoad(),

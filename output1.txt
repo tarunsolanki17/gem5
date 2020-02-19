@@ -1,0 +1,13 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb 16 2020 11:27:19
+gem5 started Feb 16 2020 11:47:57
+gem5 executing on tarun-s, pid 17739
+command line: build/X86/gem5.opt configs/example/se.py --cmd=/home/tarun/Desktop/gem5/tests/my_progs/linked --cpu-type=DerivO3CPU --caches
+
+Global frequency set at 1000000000000 ticks per second
+**** REAL SIMULATION ****
+======== Address of a ======== 140737488350448 
+Answer =  -7986
+Exiting @ tick 32916500 because exiting with last active thread context

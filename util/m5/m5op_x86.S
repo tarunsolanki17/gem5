@@ -88,6 +88,7 @@ TWO_BYTE_OP(m5_init_param, M5OP_INIT_PARAM)
 TWO_BYTE_OP(m5_load_symbol, M5OP_LOAD_SYMBOL)
 TWO_BYTE_OP(m5_reset_stats, M5OP_RESET_STATS)
 TWO_BYTE_OP(m5_dump_stats, M5OP_DUMP_STATS)
+TWO_BYTE_OP(m5_global_init, M5OP_GLOBAL_INIT)                   // TODO: Added global_init
 TWO_BYTE_OP(m5_dump_reset_stats, M5OP_DUMP_RESET_STATS)
 TWO_BYTE_OP(m5_checkpoint, M5OP_CHECKPOINT)
 TWO_BYTE_OP(m5_read_file, M5OP_READ_FILE)
