@@ -34,3 +34,8 @@
 // Force the instantiation of LDSTQ for all the implementations we care about.
 template class LSQ<O3CPUImpl>;
 
+
+// TODO : Changes made here.
+
+// #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
+// int global_flag = 0;

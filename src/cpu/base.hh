@@ -46,7 +46,7 @@
 #ifndef __CPU_BASE_HH__
 #define __CPU_BASE_HH__
 
-int global_flag = 0;          // TODO: Added
+
 
 #include <vector>
 

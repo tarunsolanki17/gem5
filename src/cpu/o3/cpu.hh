@@ -721,10 +721,11 @@ class FullO3CPU : public BaseO3CPU
     //* uint8_t *data => this is a pointer to some location which can be type casted to a pointer of different type.
     //* The size variable might be helping with that.
 
-    // #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
-    // #include"/home/tarun/Desktop/gem5/src/sim/pseudo_inst.cc"
+    // TODO: Changes from here.  --> Moving this global code to lsq_impl.hh file (pushRequest() definition is present there).
 
-    //TODO: The definition of global_flag has been moved to cpu/base.hh
+    // #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
+    
+    // int global_flag = 0;
 
     Fault pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                       unsigned int size, Addr addr, Request::Flags flags,
@@ -733,24 +734,21 @@ class FullO3CPU : public BaseO3CPU
                           std::vector<bool>())
 
     {   
-        // if(flag_printf==NULL){
-        //   initer();
-        // }
-
-        printf("global_flag addr in pushRequest = %p\n", &global_flag);
         
-        if(global_flag==1){
-        printf("===================== pushRequest in cpu.hh ==================\n");
-        if(!isLoad){
-          printf("===================== Store Data = %hhx ==================\n",*data);
-        }
-        if(isLoad){
-          printf("===================== Load from Address = %ld ==================\n", addr);
-        }
-        else{
-          printf("===================== Store at Address = %ld ==================\n",addr);
-        }
-      }
+        // printf("global_flag value in pushRequest = %d\n", global_flag);     // todo: Not using currently
+        
+      //   if(global_flag==1){
+      //   printf("===================== pushRequest in cpu.hh ==================\n");
+      //   if(!isLoad){
+      //     printf("===================== Store Data = %hhx ==================\n",*data);
+      //   }
+      //   if(isLoad){
+      //     printf("===================== Load from Address = %ld ==================\n", addr);
+      //   }
+      //   else{
+      //     printf("===================== Store at Address = %ld ==================\n",addr);
+      //   }
+      // }
         
 
         return iew.ldstQueue.pushRequest(inst, isLoad, data, size, addr,

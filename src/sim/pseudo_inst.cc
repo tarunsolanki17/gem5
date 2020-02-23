@@ -326,18 +326,18 @@ void dumpstats(ThreadContext *tc, Tick delay, Tick period)
     Stats::schedStatEvent(true, false, when, repeat);
 }
 
-// TODO: Add the function here.
+// TODO: global_flag is used here. ---------------------------------------------------------------------------------------------
 
-// #include "/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
-// #include "/home/tarun/Desktop/gem5/src/cpu/o3/cpu.hh"
-// int global_flag = 0;
+#include "/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"             //* <-- Header File
+
 
 void globalinit(ThreadContext *tc)
 {
+
     printf("\nRunning global_init\n");
 
     printf("global_init addr in pseudo_inst.cc = %p\n", &global_flag);
-    // DPRINTF(PseudoInst, "PseudoInst::globalinit()\n");
+/*    
     if (global_flag == 0)
     {
         global_flag = 1;
@@ -348,6 +348,7 @@ void globalinit(ThreadContext *tc)
         global_flag = 0;
         printf("HERE 2 : global_flag = %d\n", global_flag);
     }
+*/
 }
 
 void dumpresetstats(ThreadContext *tc, Tick delay, Tick period)
