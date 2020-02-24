@@ -85,6 +85,8 @@ namespace GuestABI
 
 // TODO: Add the new function declaration here and add the function in the swtich case below. (2 Tasks)
 
+extern int enable_memreq_tracing;
+
 namespace PseudoInst
 {
 
