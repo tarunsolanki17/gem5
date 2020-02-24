@@ -78,6 +78,8 @@
 using namespace std;
 using namespace Stats;
 
+int enable_memreq_tracing = 0;
+
 //TODO : Add the function definition here. (1 Task)
 
 //TODO: Find the depth of ThreadContext
@@ -328,25 +330,22 @@ void dumpstats(ThreadContext *tc, Tick delay, Tick period)
 
 // TODO: global_flag is used here. ---------------------------------------------------------------------------------------------
 
-#include "/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"             //* <-- Header File
-
-
 void globalinit(ThreadContext *tc)
 {
 
     printf("\nRunning global_init\n");
 
-    printf("global_init addr in pseudo_inst.cc = %p\n", &global_flag);
+    printf("global_init addr in pseudo_inst.cc = %p\n", &enable_memreq_tracing);
 /*    
-    if (global_flag == 0)
+    if (enable_memreq_tracing == 0)
     {
-        global_flag = 1;
-        printf("HERE 1 : global_flag = %d\n", global_flag);
+        enable_memreq_tracing = 1;
+        printf("HERE 1 : enable_memreq_tracing = %d\n", enable_memreq_tracing);
     }
     else
     {
-        global_flag = 0;
-        printf("HERE 2 : global_flag = %d\n", global_flag);
+        enable_memreq_tracing = 0;
+        printf("HERE 2 : enable_memreq_tracing = %d\n", enable_memreq_tracing);
     }
 */
 }

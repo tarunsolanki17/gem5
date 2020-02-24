@@ -725,7 +725,6 @@ class FullO3CPU : public BaseO3CPU
 
     // #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
     
-    // int global_flag = 0;
 
     Fault pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                       unsigned int size, Addr addr, Request::Flags flags,
@@ -735,9 +734,9 @@ class FullO3CPU : public BaseO3CPU
 
     {   
         
-        // printf("global_flag value in pushRequest = %d\n", global_flag);     // todo: Not using currently
+        // printf("enable_memreq_tracing value in pushRequest = %d\n", enable_memreq_tracing);     // todo: Not using currently
         
-      //   if(global_flag==1){
+      //   if(enable_memreq_tracing==1){
       //   printf("===================== pushRequest in cpu.hh ==================\n");
       //   if(!isLoad){
       //     printf("===================== Store Data = %hhx ==================\n",*data);

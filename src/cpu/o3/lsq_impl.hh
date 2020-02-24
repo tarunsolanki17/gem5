@@ -56,6 +56,7 @@
 #include "debug/LSQ.hh"
 #include "debug/Writeback.hh"
 #include "params/DerivO3CPU.hh"
+#include "sim/pseudo_inst.hh"
 
 using namespace std;
 
@@ -694,10 +695,7 @@ LSQ<Impl>::dumpInsts() const
 }
 
 
-// TODO : Changes made here. --> global_flag has been defined here.  ---------------------------------------------------------------
-
-#include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
-int global_flag = 0;
+// TODO : Changes made here. --> enable_memreq_tracing has been defined here.  ---------------------------------------------------------------
 
 template<class Impl>
 Fault
@@ -706,7 +704,7 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                        uint64_t *res, AtomicOpFunctorPtr amo_op,
                        const std::vector<bool>& byte_enable)
 {
-    printf("global_flag value in pushRequest = %d\n", global_flag);          
+    printf("enable_memreq_tracing value in pushRequest = %d\n", enable_memreq_tracing);          
 
     // This comming request can be either load, store or atomic.
     // Atomic request has a corresponding pointer to its atomic memory
