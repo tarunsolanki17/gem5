@@ -56,7 +56,7 @@
 #include "debug/LSQ.hh"
 #include "debug/Writeback.hh"
 #include "params/DerivO3CPU.hh"
-#include "sim/pseudo_inst.hh"
+#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
 
 using namespace std;
 
@@ -704,7 +704,23 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                        uint64_t *res, AtomicOpFunctorPtr amo_op,
                        const std::vector<bool>& byte_enable)
 {
-    printf("enable_memreq_tracing value in pushRequest = %d\n", enable_memreq_tracing);          
+    // long unsigned int addr_value = addr;
+
+        if(enable_memreq_tracing==1){
+        printf("\n===================== pushRequest in lsq_impl.hh ==================\n");
+
+        if(isLoad){
+          printf("===================== Load from Address = %p ==================\n",(void *) addr);
+          printf("===================== Size = %d ==================\n",size);
+          
+        }
+        else{
+          printf("===================== Store at Address = %p ==================\n", (void *) addr);  
+          printf("===================== Store Data = %hhx ==================\n",*data);
+          printf("===================== Size = %d ==================\n",size);
+        //   printf("===================== InstSeqNum = %ld ==================\n",inst.seqNum);
+        } 
+      }
 
     // This comming request can be either load, store or atomic.
     // Atomic request has a corresponding pointer to its atomic memory

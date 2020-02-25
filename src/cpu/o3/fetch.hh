@@ -63,7 +63,7 @@ template <class Impl>
 class FullO3CPU;
 
 /**
- * DefaultFetch class handles both single threaded and SMT fetch. Its
+ * TODO: DefaultFetch class handles both single threaded and SMT fetch. Its
  * width is specified by the parameters; each cycle it tries to fetch
  * that many instructions. It supports using a branch predictor to
  * predict direction and targets.

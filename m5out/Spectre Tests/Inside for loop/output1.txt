@@ -1,0 +1,2704 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb 24 2020 17:46:09
+gem5 started Feb 24 2020 18:06:04
+gem5 executing on tarun-s, pid 13314
+command line: build/X86/gem5.opt configs/example/se.py --cmd=/home/tarun/Desktop/gem5/tests/my_progs/linked --cpu-type=DerivO3CPU --caches
+
+Global frequency set at 1000000000000 ticks per second
+**** REAL SIMULATION ****
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = 5 ==================
+===================== Size = 4 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = 6 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = 8 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = a ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = b ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = d ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = f ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf4 ==================
+===================== Store Data = 10 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf4 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffecf0 ==================
+===================== Store Data = f0 ==================
+===================== Size = 4 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 97 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = 86 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffece8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x7fffffffecf8 ==================
+===================== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Store at Address = 0x7fffffffece8 ==================
+===================== Store Data = c8 ==================
+========================== Address of a ======== 0x7fffffffecf0 
+=== Size = 8 ==================
+
+===================== pushRequest in lsq_impl.hh ==================
+===================== Load from Address = 0x6bd8a8 ==================
+===================== Size = 8 ==================
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 1 : enable_memreq_tracing = 1
+
+Running global_init
+global_init addr in pseudo_inst.cc = 0x5598ef6eae5c
+HERE 2 : enable_memreq_tracing = 0
+Exiting @ tick 32251000 because exiting with last active thread context

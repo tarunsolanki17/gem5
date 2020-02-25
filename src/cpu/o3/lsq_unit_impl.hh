@@ -60,6 +60,8 @@
 #include "mem/packet.hh"
 #include "mem/request.hh"
 
+#include "sim/pseudo_inst.hh"                                           // TODO: Added for m5_global_init()
+
 template<class Impl>
 LSQUnit<Impl>::WritebackEvent::WritebackEvent(const DynInstPtr &_inst,
         PacketPtr _pkt, LSQUnit *lsq_ptr)
@@ -845,9 +847,13 @@ LSQUnit<Impl>::writebackStores()
 }
 
 template <class Impl>
-void
-LSQUnit<Impl>::squash(const InstSeqNum &squashed_num)
+void LSQUnit<Impl>::squash(const InstSeqNum &squashed_num)
 {
+    if(enable_memreq_tracing==1){
+        printf("==== squash instn in lsq_unit_impl.hh = %ld ---------\n", squashed_num);
+    }
+    
+
     DPRINTF(LSQUnit, "Squashing until [sn:%lli]!"
             "(Loads:%i Stores:%i)\n", squashed_num, loads, stores);
 

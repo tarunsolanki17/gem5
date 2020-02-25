@@ -74,6 +74,8 @@
  * Defines a dynamic instruction context.
  */
 
+// TODO: Definition of class BaseDynInst is present here. ---------------------------------------------------------------------
+
 template <class Impl>
 class BaseDynInst : public ExecContext, public RefCounted
 {

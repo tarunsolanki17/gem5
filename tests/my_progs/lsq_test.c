@@ -3,32 +3,18 @@
 
 
 void main(){
-    int a,b;
+    int a,i,d;
+    a = 0xF0;
 
-    
-    // TODO: Add the m5_my_instn to change the value of flag to 1 so that the statistics can be taken from there.
-
-    
-    m5_global_init();
-    
     m5_dump_reset_stats(0,0);
-    a = 8009;
+
+    for(i = 1;i<=100;i++){
+        m5_global_init();    
+        d = a;
+        m5_global_init();    
+    }
+
     m5_dump_reset_stats(0,0);
     
-    m5_global_init();
-    
-
-
-
-    printf("======== Address of a ======== %ld \n",&a);
-    b = 23;
-    printf("Answer =  %d\n",b-a);
-    
-    // m5_dump_reset_stats(0,0);
-
-    // c = 5.26;
-    // d = 78.235;
-    
-    // printf("Answer2 = %f\n",d-c);
-    // return 0;
+    printf("\n======== Address of a ======== %p \n",&a);
 }

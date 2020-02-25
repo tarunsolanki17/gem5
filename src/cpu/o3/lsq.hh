@@ -365,7 +365,8 @@ template <class Impl> class LSQ
         }
         virtual bool
         squashed() const override
-        {
+        {        
+            printf("===== squashed in lsq.hh ======\n");                                                               //TODO: squashEntry()
             return _inst->isSquashed();
         }
 

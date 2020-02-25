@@ -78,7 +78,7 @@
 using namespace std;
 using namespace Stats;
 
-int enable_memreq_tracing = 0;
+int enable_memreq_tracing = 0;                      // TODO: global shared variable defined here in cpp file.
 
 //TODO : Add the function definition here. (1 Task)
 
@@ -331,12 +331,7 @@ void dumpstats(ThreadContext *tc, Tick delay, Tick period)
 // TODO: global_flag is used here. ---------------------------------------------------------------------------------------------
 
 void globalinit(ThreadContext *tc)
-{
-
-    printf("\nRunning global_init\n");
-
-    printf("global_init addr in pseudo_inst.cc = %p\n", &enable_memreq_tracing);
-/*    
+{    
     if (enable_memreq_tracing == 0)
     {
         enable_memreq_tracing = 1;
@@ -347,7 +342,7 @@ void globalinit(ThreadContext *tc)
         enable_memreq_tracing = 0;
         printf("HERE 2 : enable_memreq_tracing = %d\n", enable_memreq_tracing);
     }
-*/
+
 }
 
 void dumpresetstats(ThreadContext *tc, Tick delay, Tick period)
