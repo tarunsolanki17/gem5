@@ -850,7 +850,7 @@ template <class Impl>
 void LSQUnit<Impl>::squash(const InstSeqNum &squashed_num)
 {
     if(enable_memreq_tracing==1){
-        printf("==== squash instn in lsq_unit_impl.hh = %ld ---------\n", squashed_num);
+        printf("-- Sqsh -> ISN (%ld)\n\n", squashed_num);
     }
     
 

@@ -230,7 +230,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_forloop_linked", 
+                        "executable": "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_2", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -247,7 +247,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_forloop_linked"
+                            "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_2"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 

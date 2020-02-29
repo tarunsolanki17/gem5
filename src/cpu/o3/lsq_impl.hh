@@ -707,18 +707,24 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
     // long unsigned int addr_value = addr;
 
         if(enable_memreq_tracing==1){
-        printf("\n===================== pushRequest in lsq_impl.hh ==================\n");
 
         if(isLoad){
-          printf("===================== Load from Address = %p ==================\n",(void *) addr);
-          printf("===================== Size = %d ==================\n",size);
-          
+          printf("-- ISN: (%lu) : L from (%p) -- of Size = (%d) \n\n", inst->seqNum ,(void *) addr , size);
         }
         else{
-          printf("===================== Store at Address = %p ==================\n", (void *) addr);  
-          printf("===================== Store Data = %hhx ==================\n",*data);
-          printf("===================== Size = %d ==================\n",size);
-        //   printf("===================== InstSeqNum = %ld ==================\n",inst.seqNum);
+          //* TODO: data has to be printed as of the size.
+        //   if(size==1)
+        //     char data = (char *) data;
+        //   else if(size==2)
+        //     short data = (short *) data;
+        // if(size==4){
+        //     int data = *((int *) data);
+        //     printf("HERE data = %d", data);
+        // }
+        //   else if(size==8)
+        //     long data = (long *) data;
+
+          printf("-- ISN: (%lu) : S -> 0x(%hhx) at (%p) -- Size = (%d) \n\n", inst->seqNum ,*data , (void *) addr , size);  
         } 
       }
 

@@ -718,13 +718,10 @@ class FullO3CPU : public BaseO3CPU
 
     //* typedef uint64_t Addr;         <== Definition of Addr
 
-    //* uint8_t *data => this is a pointer to some location which can be type casted to a pointer of different type.
+    //* uint8_t *data => this is a pointer to some location [check this ->(which can be type casted to a pointer of different type)].
     //* The size variable might be helping with that.
 
     // TODO: Changes from here.  --> Moving this global code to lsq_impl.hh file (pushRequest() definition is present there).
-
-    // #include"/home/tarun/Desktop/gem5/tests/my_progs/my_header.hh"
-    
 
     Fault pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
                       unsigned int size, Addr addr, Request::Flags flags,
