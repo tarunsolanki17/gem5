@@ -17,11 +17,11 @@ Address of x = 0x6bc3a0
 
 Address of y = 0x6bc424 
 
-Address of array1 = 0x6bc440 
+Address of array1 = 0x6bc440   (char array)
 
-Address of array2 = 0x6bc3c0 
+Address of array2 = 0x6bc3c0   (int array) 
 
-Address of array3 = 0x6bc5e0 
+Address of array3 = 0x6bc5e0   (int array) 	
 HERE 1 : enable_memreq_tracing = 1
 -- ISN: (84182) : L from (0x7fffffffece0) -- of Size = (4) 
 

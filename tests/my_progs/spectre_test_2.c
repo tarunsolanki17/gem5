@@ -10,11 +10,12 @@ int array3[100];
 #define a1_len 100
 
 void func(int N){
-    if(N < a1_len){
-        //y = 0xAA;                      //<x> = 0x6bc3a0
+    if(N < a1_len){                                                                     
         y = array2[array1[N]];
     }
 }
+
+//y = 0xAA;                      //<x> = 0x6bc3a0
 
 int main(){
     int i,j;
@@ -33,9 +34,6 @@ int main(){
         array1[i] = i;
     }
 
-
-    // m5_dump_reset_stats(0,0);
-    
     
     for(j=0;j<100;j++){             //* Training
     
@@ -45,9 +43,9 @@ int main(){
 
     func(105);                          //* Trigger
 
-    for(i=0;i<10;i++){
+    for(i=0;i<10;i++){                  //* To increase the number of instructions for m5_global_int() to get all the required traces.
     }
-    // m5_dump_reset_stats(0,0);
+    
 
 
     m5_global_init();
