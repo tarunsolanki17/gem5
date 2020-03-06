@@ -65,6 +65,7 @@ int main(){
 
     }
 
+    fill_cache();
 
     func(105);                          //* Trigger
 
