@@ -697,19 +697,31 @@ LSQ<Impl>::dumpInsts() const
 
 // TODO : Changes made here. --> enable_memreq_tracing has been defined here.  ---------------------------------------------------------------
 
+//*     typedef uint64_t Addr;         <== Definition of Addr
+//*     Tick -> long unsigned int;
+
 template<class Impl>
 Fault
-LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
-                       unsigned int size, Addr addr, Request::Flags flags,
-                       uint64_t *res, AtomicOpFunctorPtr amo_op,
-                       const std::vector<bool>& byte_enable)
+LSQ<Impl>::pushRequest( const DynInstPtr& inst, 
+                        bool isLoad, 
+                        uint8_t *data,
+                        unsigned int size, 
+                        Addr addr, 
+                        Request::Flags flags,
+                        uint64_t *res, AtomicOpFunctorPtr amo_op,
+                        const std::vector<bool>& byte_enable)
 {
     // long unsigned int addr_value = addr;
 
         if(enable_memreq_tracing==1){
+        
+        Tick curtick_original = curTick();
 
+        // printf("Tick = (%lu)" , curtick_original);
+
+        
         if(isLoad){
-          printf("-- ISN: (%lu) : L from (%p) -- of Size = (%d) \n\n", inst->seqNum ,(void *) addr , size);
+          printf("-- Tick (%lu) -- ISN: (%lu) : L from (%p) -- of Size = (%d)", curtick_original , inst->seqNum ,(void *) addr , size);
         }
         else{
           //* TODO: data has to be printed as of the size.
@@ -724,7 +736,7 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
         //   else if(size==8)
         //     long data = (long *) data;
 
-          printf("-- ISN: (%lu) : S -> 0x(%hhx) at (%p) -- Size = (%d) \n\n", inst->seqNum ,*data , (void *) addr , size);  
+          printf("-- Tick (%lu) -- ISN: (%lu) : S -> 0x(%hhx) at (%p) -- Size = (%d)", curtick_original, inst->seqNum ,*data , (void *) addr , size);  
         } 
       }
 
@@ -736,7 +748,9 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
 
     ThreadID tid = cpu->contextToThread(inst->contextId());
     auto cacheLineSize = cpu->cacheLineSize();
-    bool needs_burst = transferNeedsBurst(addr, size, cacheLineSize);
+
+    bool needs_burst = transferNeedsBurst(addr, size, cacheLineSize);      //* (cpu/utils.hh) -> Memory request has to be fragmented or not.
+
     LSQRequest* req = nullptr;
 
     // Atomic requests that access data across cache line boundary are
@@ -749,6 +763,7 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
 
     if (inst->translationStarted()) {
         req = inst->savedReq;
+        
         assert(req);
     } else {
         if (needs_burst) {
@@ -772,8 +787,14 @@ LSQ<Impl>::pushRequest(const DynInstPtr& inst, bool isLoad, uint8_t *data,
         req->initiateTranslation();
     }
 
-    /* This is the place where instructions get the effAddr. */
+    /*  This is the place where instructions get the effAddr. */
+    //* isTranslationComplete => If the translation from physical to virtual address has completed.
+
     if (req->isTranslationComplete()) {
+
+        if(enable_memreq_tracing==1)
+        printf(" -- vaddr (%p) -- paddr (%p) \n\n" , (void *) req->getVaddr() , (void *) inst->physEffAddr);
+
         if (req->isMemAccessRequired()) {
             inst->effAddr = req->getVaddr();
             inst->effSize = size;

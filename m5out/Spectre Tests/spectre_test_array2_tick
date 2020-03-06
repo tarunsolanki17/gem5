@@ -1,0 +1,29 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Mar  4 2020 16:30:09
+gem5 started Mar  4 2020 16:33:47
+gem5 executing on tarun-s, pid 27533
+command line: build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_test_2 --cpu-type=TimingSimpleCPU --caches
+
+Global frequency set at 1000000000000 ticks per second
+**** REAL SIMULATION ****
+
+Address of a1_len = 0x6b90f0 
+
+Address of i = 0x7fffffffed10 
+
+Address of j = 0x7fffffffed14 
+
+Address of x = 0x6bc3a0 
+
+Address of y = 0x6bc424 
+
+Address of array1 = 0x6bc440 
+
+Address of array2 = 0x6bc3c0 
+
+Address of array3 = 0x6bc5e0 
+HERE 1 : enable_memreq_tracing = 1
+HERE 2 : enable_memreq_tracing = 0
+Exiting @ tick 90252000 because exiting with last active thread context

@@ -132,7 +132,7 @@ class BaseDynInst : public ExecContext, public RefCounted
     };
 
     enum Flags {
-        NotAnInst,
+        NotAnInst,              //*     0
         TranslationStarted,
         TranslationCompleted,
         PossibleLoadViolation,
@@ -145,7 +145,7 @@ class BaseDynInst : public ExecContext, public RefCounted
         IsStrictlyOrdered,
         ReqMade,
         MemOpDone,
-        MaxFlags
+        MaxFlags                //*     13
     };
 
   public:
@@ -198,7 +198,7 @@ class BaseDynInst : public ExecContext, public RefCounted
     /** Iterator pointing to this BaseDynInst in the list of all insts. */
     ListIt instListIt;
 
-    ////////////////////// Branch Data ///////////////
+    //-------------------------- Branch Data ----------------------------
     /** Predicted PC state after this instruction. */
     TheISA::PCState predPC;
 
@@ -209,7 +209,7 @@ class BaseDynInst : public ExecContext, public RefCounted
     uint8_t readyRegs;
 
   public:
-    /////////////////////// Load Store Data //////////////////////
+    //------------------------- Load Store Data -----------------------------
     /** The effective virtual address (lds & stores only). */
     Addr effAddr;
 
@@ -237,14 +237,14 @@ class BaseDynInst : public ExecContext, public RefCounted
     SQIterator sqIt;
 
 
-    /////////////////////// TLB Miss //////////////////////
+    //------------------- TLB Miss ------------------------------
     /**
      * Saved memory request (needed when the DTB address translation is
      * delayed due to a hw page table walk).
      */
     LSQRequestPtr savedReq;
 
-    /////////////////////// Checker //////////////////////
+    // ------------------- Checker ------------------------------
     // Need a copy of main request pointer to verify on writes.
     RequestPtr reqToVerify;
 

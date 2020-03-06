@@ -121,7 +121,7 @@
             "domain_id": -1
         }, 
         "mem_ranges": [
-            "0:536870912"
+            "0:4294967296"
         ], 
         "eventq_index": 0, 
         "work_begin_cpu_id_exit": -1, 
@@ -230,7 +230,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_2", 
+                        "executable": "./tests/my_progs/spectre_test_2", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -247,7 +247,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "/home/tarun/Desktop/gem5/tests/my_progs/spectre_test_2"
+                            "./tests/my_progs/spectre_test_2"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 
@@ -907,7 +907,7 @@
                         "indexing_policy": {
                             "name": "indexing_policy", 
                             "eventq_index": 0, 
-                            "assoc": 2, 
+                            "assoc": 4, 
                             "cxx_class": "SetAssociative", 
                             "path": "system.cpu.icache.tags.indexing_policy", 
                             "entry_size": 64, 
@@ -916,7 +916,7 @@
                         }, 
                         "system": "system", 
                         "sequential_access": false, 
-                        "assoc": 2, 
+                        "assoc": 4, 
                         "power_model": [], 
                         "cxx_class": "BaseSetAssoc", 
                         "p_state_clk_gate_max": 1000000000000, 
@@ -942,7 +942,7 @@
                     ], 
                     "p_state_clk_gate_bins": 20, 
                     "sequential_access": false, 
-                    "assoc": 2
+                    "assoc": 4
                 }, 
                 "path": "system.cpu", 
                 "numRobs": 1, 
@@ -1109,7 +1109,7 @@
                     "response_latency": 2, 
                     "cxx_class": "Cache", 
                     "write_allocator": null, 
-                    "size": 65536, 
+                    "size": 32768, 
                     "type": "Cache", 
                     "clk_domain": "system.cpu_clk_domain", 
                     "max_miss_count": 0, 
@@ -1137,16 +1137,16 @@
                         "indexing_policy": {
                             "name": "indexing_policy", 
                             "eventq_index": 0, 
-                            "assoc": 2, 
+                            "assoc": 4, 
                             "cxx_class": "SetAssociative", 
                             "path": "system.cpu.dcache.tags.indexing_policy", 
                             "entry_size": 64, 
                             "type": "SetAssociative", 
-                            "size": 65536
+                            "size": 32768
                         }, 
                         "system": "system", 
                         "sequential_access": false, 
-                        "assoc": 2, 
+                        "assoc": 4, 
                         "power_model": [], 
                         "cxx_class": "BaseSetAssoc", 
                         "p_state_clk_gate_max": 1000000000000, 
@@ -1154,7 +1154,7 @@
                         "entry_size": 64, 
                         "block_size": 64, 
                         "type": "BaseSetAssoc", 
-                        "size": 65536
+                        "size": 32768
                     }, 
                     "tgts_per_mshr": 20, 
                     "demand_mshr_reserve": 1, 
@@ -1172,7 +1172,7 @@
                     ], 
                     "p_state_clk_gate_bins": 20, 
                     "sequential_access": false, 
-                    "assoc": 2
+                    "assoc": 4
                 }, 
                 "commitToDecodeDelay": 1, 
                 "smtIQPolicy": "Partitioned", 
@@ -1452,7 +1452,7 @@
                 "tRAS": 35000, 
                 "static_frontend_latency": 10000, 
                 "devices_per_rank": 8, 
-                "range": "0:536870912", 
+                "range": "0:4294967296", 
                 "mem_sched_policy": "frfcfs", 
                 "IDD2P12": 0.0, 
                 "device_rowbuffer_size": 1024, 
