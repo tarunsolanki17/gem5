@@ -230,7 +230,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "./tests/my_progs/spectre_test_2", 
+                        "executable": "./tests/my_progs/spectre_test_3", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -239,7 +239,7 @@
                         "maxStackSize": 67108864, 
                         "ppid": 0, 
                         "type": "Process", 
-                        "cwd": "/home/tarun/Desktop/gem5", 
+                        "cwd": "/home/tarun-d/Desktop/gem5", 
                         "pgid": 100, 
                         "simpoint": 0, 
                         "euid": 100, 
@@ -247,7 +247,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "./tests/my_progs/spectre_test_2"
+                            "./tests/my_progs/spectre_test_3"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 
