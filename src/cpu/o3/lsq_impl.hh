@@ -716,12 +716,9 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,
         if(enable_memreq_tracing==1){
         
         Tick curtick_original = curTick();
-
-        // printf("Tick = (%lu)" , curtick_original);
-
         
         if(isLoad){
-          printf("-- Tick (%lu) -- ISN: (%lu) : L from (%p) -- of Size = (%d)", curtick_original , inst->seqNum ,(void *) addr , size);
+          printf("-- Tick (%lu) -- ISN: (%lu) : L from (0x%" PRIx64 ") -- of Size = (%d)", curtick_original , inst->seqNum ,/*(void *)*/ addr , size);
         }
         else{
           //* TODO: data has to be printed as of the size.
@@ -736,7 +733,7 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,
         //   else if(size==8)
         //     long data = (long *) data;
 
-          printf("-- Tick (%lu) -- ISN: (%lu) : S -> 0x(%hhx) at (%p) -- Size = (%d)", curtick_original, inst->seqNum ,*data , (void *) addr , size);  
+          printf("-- Tick (%lu) -- ISN: (%lu) : S -> (0x%hhx) at (0x%" PRIx64 ") -- Size = (%d)", curtick_original, inst->seqNum ,*data , addr , size);  
         } 
       }
 

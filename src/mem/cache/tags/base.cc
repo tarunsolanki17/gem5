@@ -58,6 +58,8 @@
 #include "sim/sim_exit.hh"
 #include "sim/system.hh"
 
+#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
+
 BaseTags::BaseTags(const Params *p)
     : ClockedObject(p), blkSize(p->block_size), blkMask(blkSize - 1),
       size(p->size), lookupLatency(p->tag_latency),
@@ -130,7 +132,11 @@ BaseTags::insertBlock(const PacketPtr pkt, CacheBlk *blk)
 Addr
 BaseTags::extractTag(const Addr addr) const
 {
-    return indexingPolicy->extractTag(addr);
+    // if(enable_memreq_tracing==1){
+    //     printf("extractTag() of Address (0x%" PRIx64 ") = (0x%" PRIx64 ")\n\n" , addr , indexingPolicy->extractTag(addr));
+    // }
+    
+    return indexingPolicy->extractTag(addr);            
 }
 
 void

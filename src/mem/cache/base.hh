@@ -321,7 +321,7 @@ class BaseCache : public ClockedObject
     WriteQueue writeBuffer;
 
     /** Tag and data Storage */
-    BaseTags *tags;
+    BaseTags *tags;                             // TODO: Holds the data about the tags
 
     /** Compression method being used. */
     BaseCacheCompressor* compressor;
@@ -423,7 +423,7 @@ class BaseCache : public ClockedObject
      * @param blk The block to regenerate address.
      * @return The block's address.
      */
-    Addr regenerateBlkAddr(CacheBlk* blk);
+    Addr regenerateBlkAddr(CacheBlk* blk);                          // TODO: Useful
 
     /**
      * Calculate latency of accesses that only touch the tag array.
