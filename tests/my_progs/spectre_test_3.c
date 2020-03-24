@@ -30,8 +30,7 @@ int a1_len = 100;
 
 void func(int N){                       
     if(N < a1_len){                         //* array2[64] => because array2 is a char array.
-        // y = array2[64 * array1[N]];                      // => array1[105] = array3[1] = 1  at  0x6bc5e4  ;  array2[0] = 0x6bc3c0
-        y = array2[array1[N]];
+        y = array2[64 * array1[N]];         // => array1[105] = array3[1] = 1  at  0x6bc5e4  ;  array2[0] = 0x6bc3c0
     }
 }
 
@@ -65,6 +64,7 @@ int main(){
     printf("\nAddress of j = %p \n" , &j);
     printf("\nAddress of x = %p \n" , &x);
     printf("\nAddress of y = %p \n" , &y);
+    printf("\nAddress of z = %p \n" , &z);
     printf("\nAddress of array1 = %p \n" , array1);
     printf("\nAddress of array2 = %p \n" , array2);
     printf("\nAddress of array3 = %p \n" , array3);
@@ -89,10 +89,11 @@ int main(){
 
     }
 
-    fill_cache();                       //* To remove a1_len from cache, to increase the time for transient execution.
+    fill_cache();               //* To remove a1_len from cache, to increase the time for transient execution.
 
-    z = array3[128];            //* A1 => To remove array2[0] from cache
-    z = array3[144];            //* A2 => To remove array2[64] from cache
+    z = array3[128];    //* 0x6bc7e0    //* A1 => To remove array2[0] from cache. Gets mapped to same set as array2[0]
+    z = array3[144];    //* 0x6bc820    //* A2 => To remove array2[64] from cache. Gets mapped to same set as array2[64]
+    z = array3[1];
 
     func(105);                          //* Trigger
 
@@ -102,7 +103,7 @@ int main(){
     // for(i=0;i<10;i++){                  //* To increase the number of instructions for m5_global_int() to get all the required traces.
     // }
 
-    increase();
+    // increase();
 
     m5_global_init();
 
@@ -111,6 +112,7 @@ int main(){
 
     //*-----------------------------------------  rdtsc instruction  ------------------------------------------------------------
 
+    /*
     uint64_t tick1, tick2, tick3;
     tick1 = __rdtsc();
     printf("\nInitial tick : %" PRId64 "\n", tick1);
@@ -126,7 +128,7 @@ int main(){
     tick3 = __rdtsc();
     printf("Tick after a3[144] : %" PRId64 "\n", tick3);
     printf("Time Taken = %" PRId64 "\n\n", tick3 - tick2);
-
+    */
 
     // TODO: Use rdtsc inst to compare the access time for A1 and A2
     

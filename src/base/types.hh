@@ -99,6 +99,10 @@ class Cycles
     /** Converting back to the value type. */
     constexpr operator uint64_t() const { return c; }
 
+    uint64_t getValue(){
+        return c;
+    }
+
     /** Prefix increment operator. */
     Cycles& operator++()
     { ++c; return *this; }

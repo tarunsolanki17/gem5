@@ -230,7 +230,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "./tests/my_progs/spectre_test_3", 
+                        "executable": "./tests/my_progs/spectre_test_3_clean", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -247,7 +247,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "./tests/my_progs/spectre_test_3"
+                            "./tests/my_progs/spectre_test_3_clean"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 

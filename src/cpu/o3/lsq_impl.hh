@@ -702,7 +702,7 @@ LSQ<Impl>::dumpInsts() const
 
 template<class Impl>
 Fault
-LSQ<Impl>::pushRequest( const DynInstPtr& inst, 
+LSQ<Impl>::pushRequest( const DynInstPtr& inst,         //* Defined in (cpu/base_dyn_inst.hh)
                         bool isLoad, 
                         uint8_t *data,
                         unsigned int size, 
@@ -748,7 +748,7 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,
 
     bool needs_burst = transferNeedsBurst(addr, size, cacheLineSize);      //* (cpu/utils.hh) -> Memory request has to be fragmented or not.
 
-    LSQRequest* req = nullptr;
+    LSQRequest* req = nullptr;      //* LSQRequest defined in (o3/lsq.hh)
 
     // Atomic requests that access data across cache line boundary are
     // currently not allowed since the cache does not guarantee corresponding
@@ -764,24 +764,24 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,
         assert(req);
     } else {
         if (needs_burst) {
-            req = new SplitDataRequest(&thread[tid], inst, isLoad, addr,
+            req = new SplitDataRequest(&thread[tid], inst, isLoad, addr,        //* Defined in (o3/lsq.hh)
                     size, flags, data, res);
         } else {
-            req = new SingleDataRequest(&thread[tid], inst, isLoad, addr,
+            req = new SingleDataRequest(&thread[tid], inst, isLoad, addr,       //* Defined in (o3/lsq.hh)
                     size, flags, data, res, std::move(amo_op));
         }
         assert(req);
         if (!byte_enable.empty()) {
             req->_byteEnable = byte_enable;
         }
-        inst->setRequest();
-        req->taskId(cpu->taskId());
+        inst->setRequest();                     //* (cpu/base_dyn_inst.hh)
+        req->taskId(cpu->taskId());             //* (o3/lsq.hh)
 
         // There might be fault from a previous execution attempt if this is
         // a strictly ordered load
         inst->getFault() = NoFault;
 
-        req->initiateTranslation();
+        req->initiateTranslation();             //* defined below in this file
     }
 
     /*  This is the place where instructions get the effAddr. */
@@ -802,9 +802,9 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,
             }
             Fault fault;
             if (isLoad)
-                fault = cpu->read(req, inst->lqIdx);
+                fault = cpu->read(req, inst->lqIdx);            //* Load Queue Index
             else
-                fault = cpu->write(req, data, inst->sqIdx);
+                fault = cpu->write(req, data, inst->sqIdx);     //* Store Queue Index
             // inst->getFault() may have the first-fault of a
             // multi-access split request at this point.
             // Overwrite that only if we got another type of fault

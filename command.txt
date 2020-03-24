@@ -1,0 +1,1 @@
+build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_test_3 --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=1kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64 --l2cache --l2_size=1kB --l2_assoc=1 > spectre_test_3.txt

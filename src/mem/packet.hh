@@ -68,7 +68,7 @@
 #include "sim/core.hh"
 
 class Packet;
-typedef Packet *PacketPtr;
+typedef Packet* PacketPtr;              //* #Creates a new typedef for the pointer of type Packet.
 typedef uint8_t* PacketDataPtr;
 typedef std::list<PacketPtr> PacketList;
 typedef uint64_t PacketId;
@@ -334,7 +334,7 @@ class Packet : public Printable
     * responder receives the packet. If not populated memory should
     * be allocated.
     */
-    PacketDataPtr data;
+    PacketDataPtr data;             //* # PacketDataPtr is typedef uint8_t* PacketDataPtr
 
     /// The address of the request.  This address could be virtual or
     /// physical, depending on the system configuration.

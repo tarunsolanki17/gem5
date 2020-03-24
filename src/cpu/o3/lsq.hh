@@ -62,6 +62,7 @@ template <class Impl> class FullO3CPU;
 
 // * This file has the complete class of LSQ
 // * Read Write functions have been defined below
+
 template <class Impl> class LSQ                    
 
 {
@@ -478,6 +479,7 @@ template <class Impl> class LSQ
         }
 
         uint32_t taskId() const { return _taskId; }
+
         RequestPtr request(int idx = 0) { return _requests.at(idx); }
 
         const RequestPtr
@@ -487,6 +489,7 @@ template <class Impl> class LSQ
         }
 
         Addr getVaddr(int idx = 0) const { return request(idx)->getVaddr(); }
+
         virtual void initiateTranslation() = 0;
 
         PacketPtr packet(int idx = 0) { return _packets.at(idx); }
@@ -625,8 +628,7 @@ template <class Impl> class LSQ
         bool
         isMemAccessRequired()
         {
-            return (_state == State::Request ||
-                    (isPartialFault() && isLoad()));
+            return (_state == State::Request || (isPartialFault() && isLoad()));
         }
 
         void
@@ -729,8 +731,11 @@ template <class Impl> class LSQ
         using LSQRequest::_numOutstandingPackets;
         using LSQRequest::_amo_op;
       public:
-        SingleDataRequest(LSQUnit* port, const DynInstPtr& inst, bool isLoad,
-                          const Addr& addr, const uint32_t& size,
+        SingleDataRequest(LSQUnit* port, 
+                          const DynInstPtr& inst,
+                          bool isLoad,
+                          const Addr& addr, 
+                          const uint32_t& size,
                           const Request::Flags& flags_,
                           PacketDataPtr data = nullptr,
                           uint64_t* res = nullptr,

@@ -753,9 +753,8 @@ class FullO3CPU : public BaseO3CPU
 
     /** CPU read function, forwards read to LSQ. */
     Fault read(LSQRequest* req, int load_idx)
-    {   //if(*flag_printf==1)
-        // printf("===================== read from CPU ==================\n");
-        return this->iew.ldstQueue.read(req, load_idx);
+    {   
+        return this->iew.ldstQueue.read(req, load_idx);         //* ldstQueue -> Load Store Queue => defined in (cpu/o3/iew.hh)
     }
 
     /** CPU write function, forwards write to LSQ. */

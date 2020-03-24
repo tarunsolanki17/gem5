@@ -64,6 +64,8 @@
 #include "params/WriteAllocator.hh"
 #include "sim/core.hh"
 
+#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
+
 using namespace std;
 
 BaseCache::CacheSlavePort::CacheSlavePort(const std::string &_name,
@@ -169,7 +171,7 @@ BaseCache::CacheSlavePort::processSendRetry()
 }
 
 Addr
-BaseCache::regenerateBlkAddr(CacheBlk* blk)
+BaseCache::regenerateBlkAddr(CacheBlk* blk)               // TODO: Use to get Block address in Cache
 {
     if (blk != tempBlock) {
         return tags->regenerateBlkAddr(blk);
@@ -995,10 +997,23 @@ BaseCache::calculateTagOnlyLatency(const uint32_t delay,
     return ticksToCycles(delay) + lookup_lat;
 }
 
+/**
+     * Calculate access latency in ticks given a tag lookup latency, and
+     * whether access was a hit or miss.
+     *
+     * @param blk The cache block that was accessed.
+     * @param delay The delay until the packet's metadata is present.
+     * @param lookup_lat Latency of the respective tag lookup.
+     * @return The number of ticks that pass due to a block access.
+     */
 Cycles
-BaseCache::calculateAccessLatency(const CacheBlk* blk, const uint32_t delay,
+BaseCache::calculateAccessLatency(const CacheBlk* blk,              //* CacheBlk defined in cache_blk.hh
+                                  const uint32_t delay,
                                   const Cycles lookup_lat) const
 {
+    Cycles increment(500);
+    // dataLatency += increment; 
+
     Cycles lat(0);
 
     if (blk != nullptr) {
@@ -1006,33 +1021,68 @@ BaseCache::calculateAccessLatency(const CacheBlk* blk, const uint32_t delay,
         // tags, then the data entry. In the case of parallel accesses the
         // latency is dictated by the slowest of tag and data latencies.
         if (sequentialAccess) {
-            lat = ticksToCycles(delay) + lookup_lat + dataLatency;
+            // * Sequential Access
+            lat = ticksToCycles(delay) + lookup_lat + dataLatency;        //TODO: Look for the Data Latency
         } else {
+            // * Parallel Access
             lat = ticksToCycles(delay) + std::max(lookup_lat, dataLatency);
         }
 
-        // Check if the block to be accessed is available. If not, apply the
-        // access latency on top of when the block is ready to be accessed.
+        //* # Block is not available in cache.
+        //* Check if the block to be accessed is available.         
+        // If not, apply the access latency on top of when the block is ready to be accessed.
         const Tick tick = curTick() + delay;
         const Tick when_ready = blk->getWhenReady();
-        if (when_ready > tick &&
-            ticksToCycles(when_ready - tick) > lat) {
+        if (when_ready > tick && ticksToCycles(when_ready - tick) > lat) {
             lat += ticksToCycles(when_ready - tick);
+
+            // TODO: Add the latency of 500cc only when that block is not available in cache.
+            lat += increment;
+
+            
         }
+
+        // if(enable_memreq_tracing==1){
+
+        //     printf("Block is not null: Data: %" PRId8 " Tag: %" PRIx64 " Latency: %" PRId64 " \n\n" , *(blk->data) , blk->tag , lat.getValue());
+        // }
+
     } else {
         // In case of a miss, we neglect the data access in a parallel
         // configuration (i.e., the data access will be stopped as soon as
         // we find out it is a miss), and use the tag-only latency.
         lat = calculateTagOnlyLatency(delay, lookup_lat);
+
+        // if(enable_memreq_tracing==1){
+            
+        //     printf("Block is null: Latency: %" PRId64 " \n\n" , lat.getValue());
+        // }
     }
 
+    
     return lat;
 }
 
-bool
-BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
-                  PacketList &writebacks)
+/**
+     * Does all the processing necessary to perform the provided request.
+     * @param pkt The memory request to perform.
+     * @param blk The cache block to be updated.
+     * @param lat The latency of the access.
+     * @param writebacks List for any writebacks that need to be performed.
+     * @return Boolean indicating whether the request was satisfied.
+     */
+
+bool BaseCache::access( PacketPtr pkt, 
+                        CacheBlk *&blk, 
+                        Cycles &lat,
+                        PacketList &writebacks)
 {
+    //TODO: Print the vaddr paddr of request from pkt.
+    // if(enable_memreq_tracing==1){
+    //     printf();
+    // }
+    
+
     // sanity check
     assert(pkt->isRequest());
 
@@ -1044,8 +1094,16 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
     Cycles tag_latency(0);
     blk = tags->accessBlock(pkt->getAddr(), pkt->isSecure(), tag_latency);
 
-    DPRINTF(Cache, "%s for %s %s\n", __func__, pkt->print(),
-            blk ? "hit " + blk->print() : "miss");
+    DPRINTF(Cache, "%s for %s %s\n", __func__, pkt->print(),blk ? "hit " + blk->print() : "miss");
+
+    if(enable_memreq_tracing==1){
+        std::string s;
+        s = blk ? "hit -- " + blk->print() : "miss -- ";
+        std::cout << pkt->print() << " " << s;
+        // printf("%s \n" , pkt->print());
+        // printf("%s for %s %s\n", __func__, pkt->print(),blk ? "hit " + blk->print() : "miss");
+    }
+    
 
     if (pkt->req->isCacheMaintenance()) {
         // A cache maintenance operation is always forwarded to the
@@ -1253,8 +1311,7 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
 
         // If this a write-through packet it will be sent to cache below
         return !pkt->writeThrough();
-    } else if (blk && (pkt->needsWritable() ? blk->isWritable() :
-                       blk->isReadable())) {
+    } else if (blk && (pkt->needsWritable() ? blk->isWritable() : blk->isReadable())) {
         // OK to satisfy access
         incHitCount(pkt);
 
@@ -1271,18 +1328,32 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
             lat = calculateTagOnlyLatency(pkt->headerDelay, tag_latency);
         }
 
+        if(enable_memreq_tracing==1){
+            printf(" Latency: %" PRId64 " \n\n" , lat.getValue());
+        }
+
         satisfyRequest(pkt, blk);
         maintainClusivity(pkt->fromCache(), blk);
 
         return true;
     }
 
+    
+    
     // Can't satisfy access normally... either no block (blk == nullptr)
     // or have block but need writable
 
     incMissCount(pkt);
 
     lat = calculateAccessLatency(blk, pkt->headerDelay, tag_latency);
+
+    //* Code for adding the latency of 500 clock cycles.
+    if(enable_memreq_tracing==1){
+        Cycles increment(500);
+        lat += increment;
+        printf(" Latency: %" PRId64 " \n\n" , lat.getValue());
+    }
+    
 
     if (!blk && pkt->isLLSC() && pkt->isWrite()) {
         // complete miss on store conditional... just give up now
