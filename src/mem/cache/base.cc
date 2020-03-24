@@ -1098,8 +1098,8 @@ bool BaseCache::access( PacketPtr pkt,
 
     if(enable_memreq_tracing==1){
         std::string s;
-        s = blk ? "hit -- " + blk->print() : "miss -- ";
-        std::cout << pkt->print() << " " << s;
+        s = blk ? "Hit -- Blk -> " + blk->print() : "Miss -- ";
+        std::cout << "-- " << pkt->print() << " " << s;
         // printf("%s \n" , pkt->print());
         // printf("%s for %s %s\n", __func__, pkt->print(),blk ? "hit " + blk->print() : "miss");
     }
