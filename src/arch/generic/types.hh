@@ -38,6 +38,8 @@
 #include "base/types.hh"
 #include "sim/serialize.hh"
 
+//#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
+
 // Logical register index type.
 typedef uint16_t RegIndex;
 
@@ -66,9 +68,11 @@ class PCStateBase : public Serializable
      *
      * @return Memory address of the current instruction's encoding.
      */
-    Addr
-    instAddr() const
+    Addr instAddr() const
     {
+        // if(enable_memreq_tracing==1){
+            // printf("-- PC: (0x%" PRIx64 ") \n\n" , _pc);
+        // }
         return _pc;
     }
 
@@ -146,6 +150,7 @@ class SimplePCState : public PCStateBase
   public:
 
     Addr pc() const { return _pc; }
+
     void pc(Addr val) { _pc = val; }
 
     Addr npc() const { return _npc; }

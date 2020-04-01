@@ -29,7 +29,7 @@ int a1_len = 100;
 
 void func(int N){                       
     if(N < a1_len){                         //* array2[64] => because array2 is a char array.
-        y = array2[64 * array1[N]];         //* => array1[105] = array3[1] = 1  at  0x6bc5e4  ;  array2[0] = 0x6bc3c0
+        y = array2[2 * array1[N]];         //* => array1[105] = array3[1] = 1  at  0x6bc5e4  ;  array2[0] = 0x6bc3c0
                                         //* array1[105] has been placed in the cache beforehand to lessen the time for accessing that.
     }
 }
@@ -58,8 +58,8 @@ int main(){
 
     
 
-    m5_global_init();           //* Stats are from here.
-    m5_dump_reset_stats(0,0);
+    // m5_global_init();           //* Stats are from here.
+    // m5_dump_reset_stats(0,0);
 
 
 
@@ -82,20 +82,28 @@ int main(){
 
     fill_cache();               //* To remove a1_len from cache, to increase the time for transient execution.
 
+
+
+    m5_global_init();
+    // lfence
+    // mfence
+
     z = array3[128];    //* 0x6bc7e0    //* A1 => To remove array2[0] from cache. Gets mapped to same set as array2[0]
     z = array3[144];    //* 0x6bc820    //* A2 => To remove array2[64] from cache. Gets mapped to same set as array2[64]
     z = array3[1];      //* array3[1] is accessed so that this counts as a hit in func()
 
     func(105);                          //* Trigger
 
-    
-
-
-
-
-    m5_dump_reset_stats(0,0);
+    // lfence
+    // mfence
     m5_global_init();
 
+
+
+
+
+    // m5_dump_reset_stats(0,0);
+    
     
 
     
