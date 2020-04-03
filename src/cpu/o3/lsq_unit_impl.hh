@@ -60,7 +60,8 @@
 #include "mem/packet.hh"
 #include "mem/request.hh"
 
-#include "sim/pseudo_inst.hh"                                           // TODO: Added for m5_global_init()
+#include "sim/memreq_tracing.hh"                                           // TODO: Added for m5_global_init()
+
 
 template<class Impl>
 LSQUnit<Impl>::WritebackEvent::WritebackEvent(const DynInstPtr &_inst,

@@ -58,6 +58,8 @@
 #include "params/DerivO3CPU.hh"
 #include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
 
+#include "sim/memreq_tracing.hh"
+
 using namespace std;
 
 template <class Impl>

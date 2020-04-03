@@ -38,7 +38,7 @@
 #include "base/types.hh"
 #include "sim/serialize.hh"
 
-//#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
+#include "sim/memreq_tracing.hh"                   // TODO: Added for the global_init instruction
 
 // Logical register index type.
 typedef uint16_t RegIndex;
@@ -70,9 +70,9 @@ class PCStateBase : public Serializable
      */
     Addr instAddr() const
     {
-        // if(enable_memreq_tracing==1){
-            // printf("-- PC: (0x%" PRIx64 ") \n\n" , _pc);
-        // }
+        if(enable_memreq_tracing==1){
+            printf("-- PC: (0x%" PRIx64 ") \n\n" , _pc);
+        }
         return _pc;
     }
 

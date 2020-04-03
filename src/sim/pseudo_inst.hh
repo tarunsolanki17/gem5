@@ -85,7 +85,7 @@ namespace GuestABI
 
 // TODO: Added the new function declaration here and add the function in the swtich case below. (2 Tasks)
 
-extern int enable_memreq_tracing;       // TODO: extern variable has been declared here.-------------------------------------------------------
+//extern int enable_memreq_tracing;       // TODO: extern variable has been declared here.-------------------------------------------------------
 
 namespace PseudoInst
 {

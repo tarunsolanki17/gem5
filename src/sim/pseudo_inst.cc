@@ -41,6 +41,8 @@
  * Authors: Nathan Binkert
  */
 
+#include "sim/memreq_tracing.hh"
+
 #include "sim/pseudo_inst.hh"
 
 #include <fcntl.h>

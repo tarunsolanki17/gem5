@@ -1,0 +1,1 @@
+extern int enable_memreq_tracing;       // TODO: extern variable has been declared here.-------------------------------------------------------

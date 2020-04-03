@@ -1109,7 +1109,7 @@
                     "response_latency": 2, 
                     "cxx_class": "Cache", 
                     "write_allocator": null, 
-                    "size": 1024, 
+                    "size": 32768, 
                     "type": "Cache", 
                     "clk_domain": "system.cpu_clk_domain", 
                     "max_miss_count": 0, 
@@ -1142,7 +1142,7 @@
                             "path": "system.cpu.dcache.tags.indexing_policy", 
                             "entry_size": 64, 
                             "type": "SetAssociative", 
-                            "size": 1024
+                            "size": 32768
                         }, 
                         "system": "system", 
                         "sequential_access": false, 
@@ -1154,7 +1154,7 @@
                         "entry_size": 64, 
                         "block_size": 64, 
                         "type": "BaseSetAssoc", 
-                        "size": 1024
+                        "size": 32768
                     }, 
                     "tgts_per_mshr": 20, 
                     "demand_mshr_reserve": 1, 

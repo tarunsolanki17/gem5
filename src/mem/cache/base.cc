@@ -64,7 +64,7 @@
 #include "params/WriteAllocator.hh"
 #include "sim/core.hh"
 
-#include "sim/pseudo_inst.hh"                   // TODO: Added for the global_init instruction
+#include "sim/memreq_tracing.hh"                   // TODO: Added for the global_init instruction
 
 using namespace std;
 
