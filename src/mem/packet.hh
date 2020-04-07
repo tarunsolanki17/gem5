@@ -68,7 +68,7 @@
 #include "sim/core.hh"
 
 class Packet;
-typedef Packet* PacketPtr;              //* #Creates a new typedef for the pointer of type Packet.
+typedef Packet* PacketPtr;              //* # Creates a new typedef for the pointer of type Packet.
 typedef uint8_t* PacketDataPtr;
 typedef std::list<PacketPtr> PacketList;
 typedef uint64_t PacketId;

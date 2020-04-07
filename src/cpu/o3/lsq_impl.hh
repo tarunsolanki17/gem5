@@ -710,7 +710,8 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,         //* Defined in (cpu/base
                         unsigned int size, 
                         Addr addr, 
                         Request::Flags flags,
-                        uint64_t *res, AtomicOpFunctorPtr amo_op,
+                        uint64_t *res, 
+                        AtomicOpFunctorPtr amo_op,
                         const std::vector<bool>& byte_enable)
 {
     // long unsigned int addr_value = addr;
@@ -718,9 +719,13 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,         //* Defined in (cpu/base
         if(enable_memreq_tracing==1){
         
         Tick curtick_original = curTick();
-        
+
+        Addr pc = inst->instAddr();
+
+        printf("-- PC: (0x%" PRIx64 ")", pc);
+
         if(isLoad){
-          printf("-- Tick (%lu) -- ISN: (%lu) : L from (0x%" PRIx64 ") -- of Size = (%d)", curtick_original , inst->seqNum ,/*(void *)*/ addr , size);
+          printf("- Tick (%lu) - ISN: (%lu) :: L from (0x%" PRIx64 ") of Size = (%d)", curtick_original , inst->seqNum ,/*(void *)*/ addr , size);
         }
         else{
           //* TODO: data has to be printed as of the size.
@@ -735,7 +740,7 @@ LSQ<Impl>::pushRequest( const DynInstPtr& inst,         //* Defined in (cpu/base
         //   else if(size==8)
         //     long data = (long *) data;
 
-          printf("-- Tick (%lu) -- ISN: (%lu) : S -> (0x%hhx) at (0x%" PRIx64 ") -- Size = (%d)", curtick_original, inst->seqNum ,*data , addr , size);  
+          printf("- Tick (%lu) - ISN: (%lu) :: S -> (0x%hhx) at (0x%" PRIx64 ") of Size = (%d)", curtick_original, inst->seqNum ,*data , addr , size);  
         } 
       }
 

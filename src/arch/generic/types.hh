@@ -70,9 +70,9 @@ class PCStateBase : public Serializable
      */
     Addr instAddr() const
     {
-        if(enable_memreq_tracing==1){
-            printf("-- PC: (0x%" PRIx64 ") \n\n" , _pc);
-        }
+        // if(enable_memreq_tracing==1){
+        //     printf("-- PC: (0x%" PRIx64 ") \n\n" , _pc);
+        // }
         return _pc;
     }
 
