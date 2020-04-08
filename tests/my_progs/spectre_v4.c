@@ -12,57 +12,41 @@ int x;
 
 char K[8196];
 char M[8196];
-char *X;
+char *X, *ptr1, *ptr2;
 char y;
 
 int main(){    
 
     int i;
 
-    m5_global_init();
-    _mm_lfence();
-    _mm_mfence();
-
-    for(i=0;i<=1023;i++)
+    for(i=0;i<=1023;i++)    //* K filled with 0x1   (Shouldn't be read)
         K[i] = 0x1;
     
-    X = K;
+    X = K;                  //* Base address of K (secret array) placed in X
 
-    for(i=0;i<=1023;i++)
+    for(i=0;i<=1023;i++)    //* M filled with 0x5   (Allowed to be read)
         M[i] = 0x5;
 
-    X = M;
-    y = *X;
+    m5_global_init();       //* Stats
+    _mm_lfence();
+    _mm_mfence();
+
+
+    ptr1 = M;               
+    _mm_clflush(&ptr1);
+    X = ptr1;
+    y = *X;                 //* y gets a value 0x1 in microarchitecture during speculation (line 36: ./m5out/Spectre Test/variant_4/spectre_v4_test.txt)
+
 
     _mm_lfence();
     _mm_mfence();
     m5_global_init();
 
 
-    // char *array_ptr = array;
-    // array[0] = 2;
-
-    // q = ch;
-
-
-
-    // _mm_clflush(array);
-
-    // printf(ch); 
-
-    // q = q + 1;
-    
-
-
-    // __asm__(  
-    //     "mov al, 0x1"
-    //     "mov [rdi + rcx], al"
-    //     "movzx r8, BYTE PTR [rsi + rcx]"
-    // );
-
-    // "movq $array, %rdi;"
-
     // m5_global_init();
+
+    //* IRRELEVENT TO THE ATTACK
+
     _mm_lfence();
     _mm_mfence();
 

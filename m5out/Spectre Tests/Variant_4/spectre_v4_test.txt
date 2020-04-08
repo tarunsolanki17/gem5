@@ -2,70 +2,82 @@ gem5 Simulator System.  http://gem5.org
 gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 compiled Apr  7 2020 12:35:13
-gem5 started Apr  7 2020 14:56:01
-gem5 executing on tarund-desk, pid 10449
-command line: build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_v4 --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=1kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64
+gem5 started Apr  8 2020 18:43:49
+gem5 executing on tarund-desk, pid 17114
+command line: build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_v4 --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=32kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64
 
 Global frequency set at 1000000000000 ticks per second
 **** REAL SIMULATION ****
-array[] = 5 
 HERE 1 : enable_memreq_tracing = 1
+-- PC: (0x400bc8)- Tick (41477000) - ISN: (60159) :: S -> (0xe0) at (0x6be3c8) of Size = (8) -- vaddr (0x6be3c8) -- paddr (0xbe3c8) 
 
--- PC: (0x400b9a)- Tick (40316500) - ISN: (29477) :: L from (0x6bc3c0) of Size = (8) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- PC: (0x400bd6)- Tick (41477000) - ISN: (60162) :: S -> (0xc8) at (0x7fffffffed28) of Size = (8) -- vaddr (0x7fffffffed28) -- paddr (0x1c1d28) 
 
--- ReadReq [bc3c0:bc3c7] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x2f0 set: 0xf way: 0 Latency: 2 
+-- PC: (0x400bda)- Tick (41477000) - ISN: (60163) :: L from (0x7fffffffed28) of Size = (8) -- vaddr (0x7fffffffed28) -- paddr (0x1c1d28) 
 
--- PC: (0x400b9d)- Tick (40316500) - ISN: (29478) :: S -> (0x0) at (0x6bc3c0) of Size = (1) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- PC: (0x400bde)- Tick (41478000) - ISN: (60164) :: S -> (0x0) at (0x6be3c8) of Size = (1) -- vaddr (0x6be3c8) -- paddr (0xbe3c8) 
 
--- CleanInvalidReq [bc3c0:bc3c0] PoC Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x2f0 set: 0xf way: 0
+-- WriteReq [be3c8:be3cf] Miss --  Latency: 502 
 
--- PC: (0x400baa)- Tick (40332000) - ISN: (29482) :: S -> (0x5) at (0x6bc3c0) of Size = (8) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- WriteReq [1c1d28:1c1d2f] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0x74 way: 0 Latency: 2 
 
--- PC: (0x400bad)- Tick (40332000) - ISN: (29483) :: L from (0x6bc3c0) of Size = (4) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- CleanInvalidReq [be3c8:be3c8] PoC Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x17 set: 0x18f way: 0
 
--- WriteReq [bc3c0:bc3c7] Miss --  Latency: 502 
+-- PC: (0x400be1)- Tick (41574000) - ISN: (60167) :: L from (0x6be3c8) of Size = (8) -- vaddr (0x6be3c8) -- paddr (0xbe3c8) 
 
--- PC: (0x400bb6)- Tick (40335500) - ISN: (29489) :: L from (0x6bc500) of Size = (1) -- vaddr (0x6bc500) -- paddr (0xbc500) 
+-- ReadReq [be3c8:be3cf] Miss --  Latency: 502 
 
--- ReadReq [bc500:bc500] Miss --  Latency: 502 
+-- PC: (0x400bef)- Tick (41574000) - ISN: (60171) :: L from (0x7c03e8) of Size = (8) -- vaddr (0x7c03e8) -- paddr (0x1c03e8) 
 
--- ReadReq [11c0:11ff] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x4 set: 0x7 way: 0 Latency: 2 
+-- ReadReq [1c03e8:1c03ef] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0xf way: 0 Latency: 2 
 
--- PC: (0x400bc3)- Tick (40391500) - ISN: (29495) :: S -> (0xc8) at (0x7fffffffed18) of Size = (8) -- vaddr (0x7fffffffed18) -- paddr (0x1bdd18) 
+-- PC: (0x400bf6)- Tick (41575500) - ISN: (60172) :: L from (0x6bc3c0) of Size = (1) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
 
--- PC: (0x400bc8)- Tick (40391500) - ISN: (29499) :: L from (0x6bc3c0) of Size = (1) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- ReadReq [bc3c0:bc3c0] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x17 set: 0x10f way: 0 Latency: 2 
 
--- ReadReq [bc3c0:bc3c0] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x2f0 set: 0xf way: 0 Latency: 2 
+-- PC: (0x400bf9)- Tick (41577500) - ISN: (60175) :: S -> (0x1) at (0x6be3d8) of Size = (1) -- vaddr (0x6be3d8) -- paddr (0xbe3d8) 
 
--- Sqsh -> ISN (29497)
+-- PC: (0x400be8)- Tick (41596500) - ISN: (60169) :: S -> (0xe0) at (0x7c03e8) of Size = (8) -- vaddr (0x7c03e8) -- paddr (0x1c03e8) 
 
--- ReadReq [c00:c3f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0 way: 0 Latency: 2 
+-- Sqsh -> ISN (60170)
 
 -- ReadReq [bc0:bff] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x2 set: 0xf way: 0 Latency: 2 
 
--- WriteReq [1bdd18:1bdd1f] Miss --  Latency: 502 
+-- WriteReq [1c03e8:1c03ef] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0xf way: 0 Latency: 2 
 
--- ReadReq [11c0:11ff] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x4 set: 0x7 way: 0 Latency: 2 
+-- ReadReq [c00:c3f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0 way: 0 Latency: 2 
 
--- PC: (0x400c31)- Tick (40397000) - ISN: (29559) :: L from (0x7fffffffed18) of Size = (8) -- vaddr (0x7fffffffed18) -- paddr (0x1bdd18) 
+-- PC: (0x400bef)- Tick (41600500) - ISN: (60227) :: L from (0x7c03e8) of Size = (8) -- vaddr (0x7c03e8) -- paddr (0x1c03e8) 
 
--- ReadReq [1bdd18:1bdd1f] Miss --  Latency: 502 
+-- ReadReq [1c03e8:1c03ef] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0xf way: 0 Latency: 2 
 
--- ReadReq [1200:123f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x4 set: 0x8 way: 0 Latency: 2 
+-- ReadReq [c40:c7f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0x1 way: 0 Latency: 2 
 
--- PC: (0x400be0)- Tick (40399000) - ISN: (29573) :: S -> (0xe5) at (0x7fffffffed18) of Size = (8) -- vaddr (0x7fffffffed18) -- paddr (0x1bdd18) 
+-- PC: (0x400bf6)- Tick (41602000) - ISN: (60228) :: L from (0x7be3e0) of Size = (1) -- vaddr (0x7be3e0) -- paddr (0x1be3e0) 
 
--- PC: (0x400bea)- Tick (40399500) - ISN: (29578) :: L from (0x7fffffffed30) of Size = (8) -- vaddr (0x7fffffffed30) -- paddr (0x1bdd30) 
+-- ReadReq [1be3e0:1be3e0] Miss --  Latency: 502 
 
--- ReadReq [1bdd30:1bdd37] Miss --  Latency: 502 
+-- ReadReq [c00:c3f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0 way: 0 Latency: 2 
 
--- Sqsh -> ISN (29575)
+-- PC: (0x400bf9)- Tick (41625000) - ISN: (60231) :: S -> (0x5) at (0x6be3d8) of Size = (1) -- vaddr (0x6be3d8) -- paddr (0xbe3d8) 
 
--- ReadReq [f740:f77f] IF Miss --  Latency: 502 
+-- WriteReq [be3d8:be3d8] Miss --  Latency: 502 
 
--- PC: (0x400bc8)- Tick (40418000) - ISN: (29563) :: L from (0x6bc3c0) of Size = (1) -- vaddr (0x6bc3c0) -- paddr (0xbc3c0) 
+-- Sqsh -> ISN (60239)
 
--- ReadReq [bc3c0:bc3c0] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x2f0 set: 0xf way: 0 Latency: 2 
+-- PC: (0x400c0a)- Tick (41652500) - ISN: (60237) :: S -> (0xf) at (0x7fffffffed18) of Size = (8) -- vaddr (0x7fffffffed18) -- paddr (0x1c1d18) 
+
+-- ReadReq [c80:cbf] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0x2 way: 0 Latency: 2 
+
+-- ReadReq [c00:c3f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0 way: 0 Latency: 2 
+
+-- WriteReq [1c1d18:1c1d1f] Hit -- Blk -> state: f (M) valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0x74 way: 0 Latency: 2 
+
+-- ReadReq [c40:c7f] IF Hit -- Blk -> state: 7 (E) valid: 1 writable: 1 readable: 1 dirty: 0 | tag: 0x3 set: 0x1 way: 0 Latency: 2 
+
+-- PC: (0x400cae)- Tick (41656500) - ISN: (60292) :: L from (0x7fffffffed18) of Size = (8) -- vaddr (0x7fffffffed18) -- paddr (0x1c1d18) 
+
+-- ReadReq [1c1d18:1c1d1f] Hit -- Blk -> state: f (M) array[] = 0 valid: 1 writable: 1 readable: 1 dirty: 1 | tag: 0x38 set: 0x74 way: 0 Latency: 2 
 
 HERE 2 : enable_memreq_tracing = 0
-Exiting @ tick 58181500 because exiting with last active thread context
+Exiting @ tick 56942500 because exiting with last active thread context
