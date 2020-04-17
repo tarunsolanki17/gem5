@@ -4,6 +4,10 @@
 #include<inttypes.h>
 #include<x86intrin.h>
 
+/*
+    Architecture Primitives
+    L1D size: 32kB
+*/
 
 char ch = 0x1;
 double q = 0;
@@ -25,7 +29,7 @@ int main(){
     X = K;                  //* Base address of K (secret array) placed in X
 
     for(i=0;i<=1023;i++)    //* M filled with 0x5   (Allowed to be read)
-        M[i] = 0x5;
+        M[i] = 0x2;
 
     m5_global_init();       //* Stats
     _mm_lfence();
@@ -34,8 +38,14 @@ int main(){
 
     ptr1 = M;               
     _mm_clflush(&ptr1);
+
+    _mm_lfence();
+    _mm_mfence();
+
     X = ptr1;
-    y = *X;                 //* y gets a value 0x1 in microarchitecture during speculation (line 36: ./m5out/Spectre Test/variant_4/spectre_v4_test.txt)
+    y = array[64 * (*X)];     //* y gets a value of array[64] initially during transient execution (line 43: ./m5out/Spectre Test/variant_4/spectre_v4_full_fledged.txt) 
+
+    //y = *X;                 //* y gets a value 0x1 in microarchitecture during speculation (line 36: ./m5out/Spectre Test/variant_4/spectre_v4_test.txt)
 
 
     _mm_lfence();
@@ -47,32 +57,32 @@ int main(){
 
     //* IRRELEVENT TO THE ATTACK
 
-    _mm_lfence();
-    _mm_mfence();
+    // _mm_lfence();
+    // _mm_mfence();
 
-    __asm__ (   
+    // __asm__ (   
                 
-                "lea 0x2bb82c(%rip),%rax;"        // Places the base address of array in rax.
-                "mov %rax, %rcx;"
-                "xor %rbx, %rbx;"                 // To clear rbx register.
-                "mov (%rax), %r9;"                // To pre-load the value in Load Buffer
-                "clflush (%rax);"                  //  clflush the array address
-                "mov %rcx, %rax;"
-                "mov $0x5, %r8;"
+    //             "lea 0x2bb82c(%rip),%rax;"        // Places the base address of array in rax.
+    //             "mov %rax, %rcx;"
+    //             "xor %rbx, %rbx;"                 // To clear rbx register.
+    //             "mov (%rax), %r9;"                // To pre-load the value in Load Buffer
+    //             "clflush (%rax);"                  //  clflush the array address
+    //             "mov %rcx, %rax;"
+    //             "mov $0x5, %r8;"
 
-                "movq %r8, (%rax);"                // A memory write which will be placed in the store buffer. 
-                                                  // You need to reaccess this and get the stale value instead, due to the speculative execution.
-                "mov (%rax), %ebx;"
-                "imul $64, %ebx, %ebx;"
+    //             "movq %r8, (%rax);"                // A memory write which will be placed in the store buffer. 
+    //                                               // You need to reaccess this and get the stale value instead, due to the speculative execution.
+    //             "mov (%rax), %ebx;"
+    //             "imul $64, %ebx, %ebx;"
                 
-                "add %rbx, %rcx;"
-                "mov (%rcx), %dl;"                  // This request to memory must be from 0x6bc3c0 (for success of the attack)                       
-    );
+    //             "add %rbx, %rcx;"
+    //             "mov (%rcx), %dl;"                  // This request to memory must be from 0x6bc3c0 (for success of the attack)                       
+    // );
                 
-    _mm_lfence();
-    _mm_mfence();
-    // m5_global_init();
+    // _mm_lfence();
+    // _mm_mfence();
+    // // m5_global_init();
 
-    printf("array[] = %d \n", array[0]);
+    // printf("array[] = %d \n", array[0]);
 
 }

@@ -300,9 +300,9 @@ namespace X86ISA
             Base::set(val);
             _size = 0;
         }
-
-        PCState() {}
-        PCState(Addr val) { set(val); }
+			
+	PCState() {}
+	PCState(Addr val) { set(val); }
 
         void
         setNPC(Addr val)

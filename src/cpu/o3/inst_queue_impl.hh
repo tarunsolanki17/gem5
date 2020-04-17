@@ -56,6 +56,8 @@
 #include "params/DerivO3CPU.hh"
 #include "sim/core.hh"
 
+#include "sim/memreq_tracing.hh"            // TODO: Added for the global_init instruction
+
 // clang complains about std::set being overloaded with Packet::set if
 // we open up the entire namespace std
 using std::list;
@@ -642,6 +644,10 @@ InstructionQueue<Impl>::insertNonSpec(const DynInstPtr &new_inst)
     DPRINTF(IQ, "Adding non-speculative instruction [sn:%llu] PC %s "
             "to the IQ.\n",
             new_inst->seqNum, new_inst->pcState());
+
+    if(enable_memreq_tracing==1){
+        printf("Adding non-speculative instruction [sn:%lu] PC %%s to the IQ.\n", new_inst->seqNum);
+    }
 
     assert(freeEntries != 0);
 

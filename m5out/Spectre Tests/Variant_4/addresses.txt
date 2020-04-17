@@ -1,0 +1,8 @@
+K -> 6bc3c0
+M -> 7be3e0
+X -> 7c03e8
+y -> 6be3d8
+ptr1 -> 6be3c8
+ptr2 -> 
+
+

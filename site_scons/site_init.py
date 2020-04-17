@@ -41,6 +41,10 @@
 from __future__ import print_function
 from gem5_python_paths import extra_python_paths
 
+import sys
+
+print(sys.version)
+
 # Check for recent-enough Python and SCons versions.
 try:
     # Really old versions of scons only take two options for the

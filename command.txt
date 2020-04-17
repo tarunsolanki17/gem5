@@ -1,3 +1,12 @@
 build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_test_3_clean --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=1kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64 --l2cache --l2_size=1kB --l2_assoc=1 > spectre_test_3.txt
 
 build/X86/gem5.opt configs/example/se.py --cmd=./tests/my_progs/spectre_v4 --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=1kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64 > spectre_v4_test.txt
+
+
+// CHANGE THE VALUE OF START CLOCK TICK
+
+build/X86/gem5.opt --debug-flags=O3PipeView --debug-file=pipeline.txt --debug-start=41000000 configs/example/se.py --cmd=./tests/my_progs/spectre_v4 --cpu-type=DerivO3CPU --caches --mem-size=4GB --l1d_size=32kB --l1i_size=1kB --l1d_assoc=1 --l1i_assoc=1 --cacheline_size=64  > spectre_v4_test.txt
+
+util/o3-pipeview.py --store_completions m5out/pipeline.txt --color -w 200
+
+less -r -S o3-pipeview.out
