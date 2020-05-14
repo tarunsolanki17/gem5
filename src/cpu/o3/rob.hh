@@ -56,7 +56,7 @@
 struct DerivO3CPUParams;
 
 /**
- * ROB class.  The ROB is largely what drives squashing.
+ ** ROB class.  The ROB is largely what drives squashing.
  */
 template <class Impl>
 class ROB

@@ -42,7 +42,8 @@ Adding non-speculative instruction [sn:60240] PC %s to the IQ.
 
 -- PC: (0x400c0f)- Tick (40515500) - ISN: (60257) :: L from (0x6be420) of Size = (1) -- vaddr (0x6be420) -- paddr (0xbe420) 
 
--- ReadReq [be420:be420] Miss --  Latency: 502 		=> Transient Execution which reads wrong address from array[]
+-- ReadReq [be420:be420] Miss --  Latency: 502 		=> Transient Execution which reads wrong address from array[] 
+													=> 0x6be420 corresponds to array[64*1] which shows that secret array K was loaded.
 
 -- PC: (0x400bee)- Tick (40639500) - ISN: (60246) :: S -> (0xe0) at (0x7c03e8) of Size = (8) -- vaddr (0x7c03e8) -- paddr (0x1c03e8) 
 
@@ -69,6 +70,7 @@ Adding non-speculative instruction [sn:60240] PC %s to the IQ.
 -- PC: (0x400c0f)- Tick (40673000) - ISN: (60335) :: L from (0x6be460) of Size = (1) -- vaddr (0x6be460) -- paddr (0xbe460) 
 
 -- ReadReq [be460:be460] Miss --  Latency: 502 		 => Correct execution
+													 => 0x6be460 corresponds to array[64*2] which shows that array M is loaded.
 
 -- PC: (0x400c13)- Tick (40725000) - ISN: (60338) :: S -> (0x0) at (0x6be3d8) of Size = (1) -- vaddr (0x6be3d8) -- paddr (0xbe3d8) 
 

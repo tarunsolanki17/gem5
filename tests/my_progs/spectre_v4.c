@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"/home/tarun-d/Desktop/gem5/include/gem5/m5ops.h"
+#include"gem5/include/gem5/m5ops.h"
 #include<inttypes.h>
 #include<x86intrin.h>
 
@@ -28,7 +28,7 @@ int main(){
     
     X = K;                  //* Base address of K (secret array) placed in X
 
-    for(i=0;i<=1023;i++)    //* M filled with 0x5   (Allowed to be read)
+    for(i=0;i<=1023;i++)    //* M filled with 0x2   (Allowed to be read)
         M[i] = 0x2;
 
     m5_global_init();       //* Stats
